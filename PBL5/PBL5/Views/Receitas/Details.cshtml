@@ -1,0 +1,58 @@
+﻿@model PBL5.Receita
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Receita</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Data)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Data)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClinicaHospital)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClinicaHospital)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Remedio.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Remedio.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Medico.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Medico.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Doença.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Doença.Nome)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

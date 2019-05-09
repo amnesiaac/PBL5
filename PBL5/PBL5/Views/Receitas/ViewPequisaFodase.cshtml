@@ -1,0 +1,16 @@
+﻿@model PBL5.Receita
+
+@{
+    ViewBag.Title = "ViewPequisaFodase";
+}
+
+<h2>ViewPequisaFodase</h2>
+
+<div class="form-group">
+    <form asp-controller="ViewPesquisaFodase" asp-action="ViewPesquisaFodase" method="get">
+        <p>
+            Pesquisar: <input type="text" name="SearchString" class="form-control">
+            <input type="submit" value="Filtrar" class="btn btn-default" />
+        </p>
+    </form>
+</div>

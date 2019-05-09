@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Model1StoreContainer" CdmEntityContainer="Model1Container">
+    <EntitySetMapping Name="RemedioSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Remedio)">
+        <MappingFragment StoreEntitySet="RemedioSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Tarja" ColumnName="Tarja" />
+          <ScalarProperty Name="Dosagem" ColumnName="Dosagem" />
+          <ScalarProperty Name="Intervalo" ColumnName="Intervalo" />
+          <ScalarProperty Name="Comprado" ColumnName="Comprado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MedicoSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Medico)">
+        <MappingFragment StoreEntitySet="MedicoSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Especialidade" ColumnName="Especialidade" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ReceitaSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Receita)">
+        <MappingFragment StoreEntitySet="ReceitaSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="ClinicaHospital" ColumnName="ClinicaHospital" />
+          <ScalarProperty Name="RemedioId" ColumnName="RemedioId" />
+          <ScalarProperty Name="MedicoId" ColumnName="MedicoId" />
+          <ScalarProperty Name="DoençaId" ColumnName="DoençaId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DoençaSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Doença)">
+        <MappingFragment StoreEntitySet="DoençaSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CompraRemediosSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.CompraRemedios)">
+        <MappingFragment StoreEntitySet="CompraRemediosSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ReceitaId" ColumnName="ReceitaId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
