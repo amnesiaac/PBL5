@@ -55,7 +55,7 @@
         </div>
     </div>
 
-    @using (Html.BeginForm("Create", "Remedios", FormMethod.Post, new { id = "remedioForm" }))
+    @using (Html.BeginForm("Create", "RemedioSet", FormMethod.Post, new { id = "remedioForm" }))
     {
 
         @Html.AntiForgeryToken()
@@ -64,8 +64,8 @@
                 <input type="submit" onclick="$('#remedioForm').submit()" value="Remedio" class="btn btn-default" />
             </div>
         </div>
-
-        @using (Html.BeginForm("Create", "Doenças", FormMethod.Post, new { id = "doençaForm" }))
+    }
+        @using (Html.BeginForm("Create", "DoençaSet", FormMethod.Post, new { id = "doençaForm" }))
         {
 
             @Html.AntiForgeryToken()
@@ -74,7 +74,7 @@
                     <input type="submit" onclick="$('#doençaForm').submit()" value="Doença" class="btn btn-default" />
                 </div>
             </div>
-
+        }
 
 
             <div class="form-group">

@@ -20,16 +20,16 @@ namespace PBL5.Controllers
             {
                 if (!String.IsNullOrEmpty(searchString))
                 {
-                    var receitas = from i in db.Receitas
-                                  orderby i.InsumoNome
-                                  where i.InsumoNome == searchString
+                    var receitas = from i in db.ReceitaSet
+                                  orderby i.Doença
+                                  where i.Doença.Nome == searchString
                                   select i;
                     return View(await receitas.ToListAsync());
                 }
                 else
                 {
-                    var receitas = from i in db.Receitas
-                                  orderby i.InsumoId
+                    var receitas = from i in db.ReceitaSet
+                                  orderby i.Id
                                   select i;
                     return View(await receitas.ToListAsync());
                 }

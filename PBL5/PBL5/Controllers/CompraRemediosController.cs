@@ -52,14 +52,14 @@ namespace PBL5.Controllers
         {
             if (ModelState.IsValid)
             {
-                Receita receita = db.Receitas.Find(compraRemedios.ReceitaId);
-                compraRemedios.ReceitaId = receita;
-                if (receita.Remedio == "Preta")
+               Receita receita = db.ReceitaSet.Find(compraRemedios.ReceitaId);
+                   compraRemedios.Receita = receita;
+               if (receita.Remedio.Tarja  == Tarja.Preta)
                 {
-                    receita = db.ReceitaSet.Find(receita.RemedioId);
-                    db.CompraRemediosSet.Remove(receita.Remedio);
+                   receita = db.ReceitaSet.Find(receita.RemedioId);
+                    db.ReceitaSet.Remove(receita);
                 }
-                receita.Remedio.Comprado == true;
+               receita.Remedio.Comprado = true;
                 db.Entry(receita.Remedio).State = EntityState.Modified;
                 db.CompraRemediosSet.Add(compraRemedios);
                 db.SaveChanges();
